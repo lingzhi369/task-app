@@ -116,8 +116,8 @@ stripe prices create \
 
 ```bash
 stripe billing_portal configurations create \
-  -d "business_profile[privacy_policy_url]=https://your-site.com/privacy" \
-  -d "business_profile[terms_of_service_url]=https://your-site.com/terms" \
+  -d "business_profile[privacy_policy_url]=https://wtebpflfygusgkscuzey.supabase.co" \
+  -d "business_profile[terms_of_service_url]=https://wtebpflfygusgkscuzey.supabase.co" \
   -d "default_return_url=http://localhost:3000/profile" \
   -d "features[subscription_cancel][enabled]=true" \
   -d "features[payment_method_update][enabled]=true"
@@ -131,7 +131,7 @@ stripe billing_portal configurations create \
 
 ```sql
 insert into vault.secrets (name, secret)
-select 'stripe', 'sk_test_xxx'
+select 'stripe', 'sk_test_51R9CNRP5I0LWPNb9JmKTDaUuxNsSiEYWadhZ0GvHRn7vziyqzrMRq5XEXK3NAL1K8eHLyw4UUPb3cYOA3pnm2gw100Sy6y8Mup'
 returning key_id;
 ```
 
@@ -157,9 +157,9 @@ Your Edge Functions will also need those environment variables. Set them like th
 
 ```bash
 supabase secrets set OPENAI_API_KEY="sk-xxx..."
-supabase secrets set STRIPE_SECRET_KEY=sk_test_xxx
-supabase secrets set STRIPE_PRICE_ID=price_xxx
-supabase secrets set STRIPE_WEBHOOK_SECRET=whsec_xxx
+supabase secrets set STRIPE_SECRET_KEY=sk_test_51R9CNRP5I0LWPNb9JmKTDaUuxNsSiEYWadhZ0GvHRn7vziyqzrMRq5XEXK3NAL1K8eHLyw4UUPb3cYOA3pnm2gw100Sy6y8Mup
+supabase secrets set STRIPE_PRICE_ID=price_1R9CWbP5I0LWPNb9M2aSNrtH
+supabase secrets set STRIPE_WEBHOOK_SECRET=whsec_3mQOgGsmJKXZSeO3D4Q4KU0OdQ9M6T7N
 ```
 
 ### Running Tests
